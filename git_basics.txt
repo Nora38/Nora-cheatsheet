@@ -32,6 +32,7 @@ git merge branch_name -> merge bunch with current branch
 git branch -d branch_name -> delete branch
 
 More info:
+git diff HEAD
 git status
 git log
 git blame

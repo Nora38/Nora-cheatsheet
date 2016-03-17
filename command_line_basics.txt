@@ -1,0 +1,47 @@
+navigate:
+ls
+cd directory
+cd ..
+
+create/open/remove files and directories
+nano filename
+rm filename
+mkdir directory
+rm -rf directory
+
+ssh and copy files from remote location
+ssh username@hostname
+scp username@hostname:/home/folder1/folder2/filename.txt /Users/folder1/folder2
+
+basic info on file:
+cat filename | wc -l -> number of lines
+ls -alt -> list files (-a) plus hidden files (-l) plus attributes (-t) ordered 
+
+copy and move
+cp filename new_location
+cp * new location -> moves all files in current location to new location (variation cp *.txt or cp file*)
+mv filename new location
+mv filename_old filename_new -> same as rename
+
+redirects:
+> : to a file overwriting previous content
+>> : to a file appending new content to old content
+| : from command to another command
+command < file : use file as input for command
+
+grep and sed (find and replace)
+grep string filename -> find string (regex) in file
+grep -i -> case insensitive
+grep -R string directory -> find files with string in name in directory
+sed string 1 string 2 -> same as grep but replace string for another one
+
+open and modify file
+nano filename
+vim filename
+
+run hive
+hive -> opens hive 
+hive -e "query string" -> run hive query from string
+hive -f query.hql -> run hive query from file
+hive -f query.hql > result.tsv -> run hive query from file and output results to another file
+
