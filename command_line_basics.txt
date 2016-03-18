@@ -1,4 +1,8 @@
+!! -> previous command
+help functionname
+
 navigate:
+pwd
 ls
 cd directory
 cd ..
@@ -9,11 +13,9 @@ rm filename
 mkdir directory
 rm -rf directory
 
-ssh and copy files from remote location
-ssh username@hostname
-scp username@hostname:/home/folder1/folder2/filename.txt /Users/folder1/folder2
-
 basic info on file:
+cat
+head (-n)
 cat filename | wc -l -> number of lines
 ls -alt -> list files (-a) plus hidden files (-l) plus attributes (-t) ordered 
 
@@ -22,6 +24,12 @@ cp filename new_location
 cp * new location -> moves all files in current location to new location (variation cp *.txt or cp file*)
 mv filename new location
 mv filename_old filename_new -> same as rename
+curl ulr_to_file
+
+manipulate data
+sort
+uniq
+echo "string" | cowsay -> very important
 
 redirects:
 > : to a file overwriting previous content
@@ -38,6 +46,10 @@ sed string 1 string 2 -> same as grep but replace string for another one
 open and modify file
 nano filename
 vim filename
+
+ssh and copy files from remote location
+ssh username@hostname
+scp username@hostname:/home/folder1/folder2/filename.txt /Users/folder1/folder2
 
 run hive
 hive -> opens hive 
