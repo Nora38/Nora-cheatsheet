@@ -1,0 +1,4 @@
+new_data <- sqldf('select df1.variable,df1.value,df2.value
+             from df1
+             left join df2
+             on df1.variable=df2.variable')

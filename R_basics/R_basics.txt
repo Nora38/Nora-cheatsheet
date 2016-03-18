@@ -1,0 +1,21 @@
+packages:
+install.packages("name")
+library("name")
+
+manipulate data frame
+data_subset <- data[data$some_value>=0.9,c("columname1","columname2","columname3")]
+colnames(data) <- c("columname1","columname2","columname3")
+data$newvalue <- data$value1*data$value2
+data[is.na(data)]<-0
+
+load data
+raw_data <- read.csv("./data/result.tsv",sep="\t",stringsAsFactors = FALSE,nrows=2e8, header=FALSE,quote = "")
+
+matrices/vectors
+W <- mat.or.vec(n,m)
+W[2,5] <- 5
+
+plots
+hist(data,breaks=500,xlim =c(0,1))
+plot(data$x,data$y)
+pairs(data)
