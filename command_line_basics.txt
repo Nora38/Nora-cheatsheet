@@ -51,6 +51,8 @@ ssh and copy files from remote location
 ssh username@hostname
 scp username@hostname:/home/folder1/folder2/filename.txt /Users/folder1/folder2
 
+export JavaHome='/Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk'
+
 run hive
 hive -> opens hive 
 hive -e "query string" -> run hive query from string

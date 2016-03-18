@@ -1,0 +1,26 @@
+use schema;
+show tables;
+show tables like "abc*";
+
+example query:
+set min_date='2016-02-29';
+set max_date='2016-03-13';
+
+drop table if exists schema.example;
+create TABLE schema.example as
+SELECT
+count(*) as count,
+some_variable,
+some_other_variable
+rank() over (PARTITION BY some_variable ORDER BY some_other_variable ASC) as example_rank
+from(select
+	some_variable,
+	some_other_variable,
+	user_id,
+        split(get_json_object(json_name,'$.json_variable'),',') as json_and_split_array,
+        from schema.table
+        LATERAL VIEW explode(array) MyTable AS lateral_view_variable
+        where logdate>=${hiveconf:min_date}
+        and logdate<=${hiveconf:max_date}
+        ) Table_name 
+group by some_variable,some_other_variable;
