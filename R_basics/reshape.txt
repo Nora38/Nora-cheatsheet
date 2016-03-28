@@ -1,2 +1,6 @@
 merge
-melt
+new_data <- merge(data1,data2, by.x = "keyword1", by.y="keyword",all.x=TRUE, all.y = FALSE)  
+
+melt & cast
+mdata <- melt(raw_data[,c("Date","Placement_type","Clicks","Impressions","Cost","Total.Conversions")], id=c("Date","Placement_type"))
+timeseries <- dcast(mdata,Date ~ Placement_type + variable,sum)

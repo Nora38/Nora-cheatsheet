@@ -23,6 +23,8 @@ backtrack:
 git checkout HEAD filename -> remove files from staging area
 git reset HEAD filename -> reset the file to original since last commit
 git reset SHA -> go back to before commit with SHA
+git checkout <SHA> -> view files before this commit
+git checkout master -> go back to current state
 
 branches:
 git branch -> what branches exist
