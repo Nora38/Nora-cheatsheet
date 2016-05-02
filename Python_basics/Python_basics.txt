@@ -1,5 +1,6 @@
 start jupyter notebook from terminal
-jupyther notebook
+jupyter notebook
+
 
 
 
