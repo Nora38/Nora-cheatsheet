@@ -1,2 +1,7 @@
 python pandas:
 http://pandas.pydata.org/pandas-docs/stable/10min.html
+
+matplotlib:
+http://matplotlib.org/gallery.html
+seaborn:
+https://stanford.edu/~mwaskom/software/seaborn/examples/
